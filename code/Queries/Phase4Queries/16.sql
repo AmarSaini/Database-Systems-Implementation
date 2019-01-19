@@ -1,0 +1,1 @@
+SELECT SUM(l_quantity), l_discount FROM lineitem WHERE l_quantity > 30 AND l_discount > 0.05 GROUP BY l_discount

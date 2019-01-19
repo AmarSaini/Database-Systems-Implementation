@@ -1,0 +1,16 @@
+Amar:
+Bison currently uses stdin as the buffer for reading query.
+We need to change this behavior so that it uses a string we pass to it instead (the string we get from the user). 
+Reason is we need to make it loop instead of finishing after one input and finishes on certain keyword (exit or quit)
+Example:
+SELECT n_nationkey FROM nation WHERE n_nationkey > 0
+SELECT r_regionkey FROM region WHERE r_regionkey > 0
+exit
+
+Florin also want other keywords implemented such as schema, prints all schema in catalog,
+
+When user input in legitmate SQL (queries statement, create statement, load statement), main need to call correct function for each. Example: SQLQuery(), SQLCreateTable(), SQLCreateIndex(), SQLLoad()
+To break a legitmate SQL down into its type, refers to extern int typeOfInput in main.cc, the variable is properly documented for its value.
+
+I do not know how to make Bison uses a string instead of stdin (if we call yyparse() in main, it will read from stdin)
+Stackoverflow or Googling will help, a common problem

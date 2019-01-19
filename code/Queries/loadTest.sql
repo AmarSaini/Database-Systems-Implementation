@@ -1,0 +1,1 @@
+LOAD DATA customer FROM customer.txt

@@ -1,0 +1,1 @@
+CREATE TABLE Persons ( PersonID decimal(18, 2), LastName char(25), FirstName int, Address varchar(255), City varchar(255) ) 

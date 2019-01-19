@@ -1,0 +1,1 @@
+SELECT SUM(l_extendedprice), l_discount FROM lineitem WHERE l_discount > 0.05 GROUP BY l_discount
